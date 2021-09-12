@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasosjs</title>
+    <script src="./js/funciones.js"></script>
+    <!--<script type="text/javascript">
+        window.onload = function recuperar()
+        {
+            alert("ESto es una prueba");
+        }
+    </script>-->
+</head>
+<body>
+    <h1>Programa Para Multiplicar</h1> 
+    <form name="F1" action="resultado.html" method="GET">
+       <label for="Articulo">Articulo</label>
+       <input type="text" name="art_text" id="art_text" value="" 
+    placeholder="Ingrese el articulo" size="30" maxlength="10" oninvalid="setCustomValidity('Sólo se permiten números')"
+    onInput="setCustomValidity('')" ><!--disabled se usa para bloquer el cuadro de texto -->
+    <br>
+    <br>
+        <label for="dato2">Dato 1</label>
+        <input type="text" name="dat1_text" id="dat1_text" value="" 
+        placeholder="Ingrese dato 2" size="20" maxlength="10" required pattern="[0-9]+" oninvalid="setCustomValidity('Sólo se permiten números')"
+        onInput="setCustomValidity('')"><!--disabled se usa para bloquer el cuadro de texto -->
+        <label for="dato2">Dato 1</label>
+        <input type="text" name="dat2_text" id="dat2_text" value="" 
+        placeholder="Ingrese dato 2" size="20" maxlength="10" required pattern="[0-9]+" oninvalid="setCustomValidity('Sólo se permiten números')"
+        onInput="setCustomValidity('')"><!--disabled se usa para bloquer el cuadro de texto -->
+        <br>
+        <br>
+        <input type="submit" name="enviar" onclick="subtotal()">
+</form>
+    
+</body>
+</html>
