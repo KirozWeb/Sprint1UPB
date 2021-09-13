@@ -1,0 +1,29 @@
+#landing_navbar {
+    
+    background-color: #CC1414;
+    width:18rem;
+    min-height: 60vh;
+    
+}
+
+#landing_navbar ul{
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+    list-style:none;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+#navbar_logo{
+    height: 100px;
+    width: 100px;    
+}
+
+#landing_navbar ul li{
+    color:#FFFFFF;
+    text-align: center;
+}
