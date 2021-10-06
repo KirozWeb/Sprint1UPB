@@ -1,5 +1,8 @@
 
-export function validar_nombreUsuario(string){   
+export function validar_nombreUsuario(string){
+    let perro = document.getElementById("in_usuario");
+    //alert("este es dentro de validar nombre usuario"+perro.value);
+    //console.log(perro.value);
     const ptr = new RegExp('^[A-Z0-9Ñ]+$', 'i');
     if (string.length < 3 || string.length > 9) {
         return false;

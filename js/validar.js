@@ -1,28 +1,43 @@
 import * as valido from "./validaciones.js";
+import * as validate from "./registro.js";
 //let valido = require("./validaciones.js");
-var usuarios;
-var contrasena;
-var query = window.location.search.substring(1);
-//console.log(query);
+let usuario;
+let contrasena;
+let boton;
+let arreglito = [];
+let contador=0;
 
-var vars = query.split("&");
-var pair = new Array();
-var temp;
-        
-for (var i=0; i < vars.length; i++) { 
-    //alert(vars[i]);           
-    temp = vars[i].split("="); 
-    pair.push(temp);            
+window.onload = inicio;
+
+function inicio(){
+    contrasena = document.getElementById("in_contrasena");
+    usuario = document.getElementById("in_usuario");
+    boton = document.getElementById("boton");
+
+    boton.addEventListener("click",mostrarValorCampo);
+    //console.log(arreglito);
+    //validate.filtrarPorContrasena(arreglito,10);
 }
-        
-vars[0]=vars[0].split("in_usuario=");
-vars[1]=vars[1].split("in_contrasena=");
+function mostrarValorCampo(){
+    //alert(campo.value);
+    console.log("usuario "+usuario.value);
+    console.log("contrasena "+contrasena.value);
+    let decision1 = valido.validar_nombreUsuario(usuario.value);
+    let decision2 = valido.validar_contrasena(contrasena.value);
+    console.log(decision1);
+    console.log(decision2);
+    arreglito = validate.agregarRegistro();
+    //arreglito.push(validate.registros);
 
-usuarios = vars[0][1];
-contrasena = vars[1][1];
-console.log(usuarios);
-console.log(contrasena);
-var usu = valido.validar_nombreUsuario(usuarios);
-var cont = valido.validar_contrasena(contrasena);
-console.log(usu);
-console.log(cont);
+
+    contador++;
+    if(contador == 5)
+    {
+        console.log("Esto es el filtro");
+        console.log(arreglito);
+        validate.filtrarPorContrasena(arreglito,10);
+        contador = 0;
+    }
+
+    console.log(contador);
+}

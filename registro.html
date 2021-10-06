@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./js/validar.js" type="module"></script>
-    <script src="./js/funciones.js"></script>
+
+
 </head>
-<body onload = "recuperar()">
-    <form name="form_registro_usuario" action="registro.html" method = "GET">
-        <label for="Articulo">Usuario</label><br><br>
-        <input type="text" name="in_usuario" id="in_usuario" value=""><br><br>
-        <label for="Articulo">Contrasena</label><br><br>
-        <input type="text" name="in_contrasena" id="in_contrasena" value=""><br><br>
-        <br><br>
-        <input type="submit" id="enviar" name="enviar" value="verificar"/>
-    </form>
-    
+<!--<body onload = "recuperar()">-->
+    <body>
+        <label for="usuario">
+            Ingresar dato
+            <input type="text" id="in_usuario">
+        </label>
+        <label for="contra">
+            Ingresar dato
+            <input type="text" id="in_contrasena">
+        </label>
+        <button id="boton">Ingresar</button>
+    <script src="./js/validar.js" type="module"></script>
+
 </body>
 </html>
