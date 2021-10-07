@@ -5,21 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="./css/estilos.css"/>
 
 </head>
 <!--<body onload = "recuperar()">-->
     <body>
+        <nav id="landing_navbar">
+            <img src="./imgs/logo.png" alt="" id="navbar_logo">
+            <ul id="lista">
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Mapa</a></li>
+            </ul>
+            <button id="btn_irRegistro" ><a href="registrarse.html" id="link_registro">Registro</a></button>
+            <button id="btn_irLoguin" >
+                <a href="registro.html" id="link_login">Loguin</a></button>
+        </nav>
+        <div id="columna_derecha">
+            <div id="contenedor">
+                <button id="aspecto">Cambiar Aspecto</button>
         <label for="usuario">
-            Ingresar dato
+            Ingresar usuario<br><br>
             <input type="text" id="in_usuario">
-        </label>
+        </label><br><br>
         <label for="contra">
-            Ingresar dato
+            Ingresar contras<br><br>
             <input type="text" id="in_contrasena">
-        </label>
+        </label><br><br>
         <button id="boton">Ingresar</button>
     <script src="./js/validar.js" type="module"></script>
-
+            </div>
+        </div>
+        <script src="./js/script.js"></script>
 </body>
 </html>
